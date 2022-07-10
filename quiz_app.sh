@@ -1,29 +1,11 @@
 #!/bin/bash
 
-declare -a questions
-declare -a answers
+####################
+# Import Questions #
+####################
 
-questions[0]="Create an array, myarr, consisting of 'bunny', ls, 3.14."
-answers[0]="myarr=('bunny' ls 3.14)"
-#
-questions[1]="Create an empty array, penguins."
-answers[1]="penguins=()"
-#
-questions[2]="Print all the values of the array, penguins."
-answers[2]='echo "${penguins[@]}"'
-#
-questions[3]="Print value from index 3 of the array, penguins."
-answers[3]='echo "${penguins[@]:3}"'
-#
-questions[4]="Print two values from index 3 of the array, penguins."
-answers[4]='echo "${penguins[@]:3:2}"'
-#
-questions[5]="Print the index values of the array, kitties."
-answers[5]='echo "${!kitties[@]}'
-#
-questions[6]="Find the length of the array, kitties."
-answers[6]='echo "${#kitties[@]}"'
-#
+source ./array_questions.sh
+#source ./101_questions.sh
 
 ###################
 # Begin App logic #
@@ -59,13 +41,13 @@ do
 
     # Get user answer and compare to proper answer
     IFS=$'\n'
-    select answer in ${answers[$RAN1]} ${answers[$RAN2]} ${answers[$RAN3]} ${answers[$RAN4]}
+    select answer in "${answers[$RAN1]}" "${answers[$RAN2]}" "${answers[$RAN3]}" "${answers[$RAN4]}"
     do
         response=$answer
         if [ "$response" == "${answers[RAN$RAN_KEY]}" ]
         then
-            echo "\nThat' Correct!"
-            echo
+            echo; echo "That's Correct!"; echo
+            sleep 2
             break
         else
             echo "That is not correct :("
