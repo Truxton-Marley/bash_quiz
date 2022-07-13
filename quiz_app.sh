@@ -4,8 +4,17 @@
 # Import Questions #
 ####################
 
-source ./array_questions.sh
-#source ./101_questions.sh
+declare -a modules
+
+
+modules[0]=array_questions.sh
+modules[1]=vim_questions.sh
+modules[2]=101_questions.sh
+modules[3]=variables_questions.sh
+
+len_modules=${#modules[@]}
+module_number=$(( $RANDOM % len_modules ))
+source ./${modules[$module_number]}
 
 ###################
 # Begin App logic #

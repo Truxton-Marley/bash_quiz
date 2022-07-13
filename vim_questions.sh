@@ -3,7 +3,7 @@
 declare -a questions
 declare -a answers
 
-question[0]='Replace all instances of foo with bar.'
+questions[0]='Replace all instances of foo with bar.'
 answers[0]=':%s/foo/bar/g'
 #
 questions[1]='Search for the next instance of the current word.'
@@ -32,3 +32,10 @@ answers[9]='CTRL-Z'
 #
 questions[10]='Move vim to the foreground from the background.'
 answers[10]='fg'
+#
+questions[11]='Set the wrap margin option to 80.'
+answers[11]=':set wm=80'
+#
+questions[10]='Go to line 42.'
+answers[10]='42G'
+
