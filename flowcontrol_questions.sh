@@ -6,11 +6,18 @@ declare -a answers
 questions[0]='A simple C-style for loop.'
 answers[0]='for (( i=0; i < 10; i++ )); do echo hi; done'
 #
-questions[1]=''
-answers[1]=''
+questions[1]='End of File keyboard shortcut.'
+answers[1]='CTRL+D'
 #
-#questions[2]=''
-#answers[2]=''
+questions[2]='Basic case statement.'
+answers[2]='case "$MYVAR in
+    hungry) echo Eat!
+        ;;
+    full) echo Sleep!
+        ;;
+    *) echo Hmmm???
+        ;;
+esac'
 #
 #questions[3]=''
 #answers[3]=''

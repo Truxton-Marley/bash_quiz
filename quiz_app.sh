@@ -11,6 +11,8 @@ modules[0]=array_questions.sh
 modules[1]=vim_questions.sh
 modules[2]=101_questions.sh
 modules[3]=variables_questions.sh
+modules[4]=flowcontrol_questions.sh
+modules[5]=comparisions_questions.sh
 
 len_modules=${#modules[@]}
 module_number=$(( $RANDOM % len_modules ))

@@ -27,8 +27,8 @@ answers[5]='chmod 755 foo.sh'
 questions[6]="Do a dry run of the script bar.sh"
 answers[6]='bash -n bar.sh'
 ##
-#questions[7]=""
-#answers[7]=''
+questions[7]='Find the anwswers to your questions in?'
+answers[7]='man bash'
 ##
 #questions[8]=""
 #answers[8]=''
